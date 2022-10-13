@@ -20,12 +20,13 @@ public record LngLat(
      * @return True if the current co-ordinate of the drone is within the central area, false otherwise
      */
     public boolean inCentralArea() {
-        /** I would basically like to compare if the co-ordinates are within the bounds of the central area,
-         * then return true. Will need to think about the singleton class for access to the central co-ordinates
+        /**
+         * worth remembering that the first co-ordinate of the central area is at the top left and goes
+         * anti-clockwise. Will need to think about the singleton class for access to the central co-ordinates
          * May also need to check if the co-ordinates are close?
          */
 
-        if ((central1 <= lng <= central2) && (central3 <= lat <= central4)) {
+        if ((central1 <= lng <= central4) && (central2 <= lat <= central3)) {
             return true;
         } else {
             return false;

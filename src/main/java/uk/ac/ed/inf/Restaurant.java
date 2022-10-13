@@ -1,6 +1,6 @@
 package uk.ac.ed.inf;
 
-
+import java.net.URL;
 //Needs to be a factory method
 public class Restaurant {
 
