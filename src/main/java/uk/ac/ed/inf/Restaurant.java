@@ -20,11 +20,23 @@ public class Restaurant {
         this.menu = menu;
     }
 
+    /** Parses the menu items from a restaurant
+     *
+     * @return  A list of Menu objects, each object containing a name of an item and its price
+     */
   public Menu[] getMenu(){
-        // This will utilise the menu class, to return
+
+      for (i = 0; i == menu.length)
+
       return null;
   }
 
+    /**
+     *
+     * @param serverBaseAddress A URL object containing the base address of the REST server
+     * @return                  A list of Restaurant items, with each containing a restaurant name,
+     * It's coordinates, and a menu item
+     */
   static Restaurant[] getRestaurantsFromRestServer(URL serverBaseAddress) {
 
       return null;
