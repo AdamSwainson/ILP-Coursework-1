@@ -3,29 +3,25 @@ package uk.ac.ed.inf;
 import java.io.IOException;
 import java.net.URL;
 
-public class CentralArea {
-    private static final CentralArea obj = new CentralArea();
-
-    String name;
-    double longitude;
-    double latitude;
-
-    private CentralArea() {
-
-
-
-        //I think this is a misplay, should be outside the constructor, and the constructor is called to impart the
-        // values received from the parsing
+public static final CentralArea {
+    
+    private static CentralArea obj;
+    
+    public LngLat[] GetCentralArea() {
         try {
             URL defaultUrl = new URL("https://ilp-rest.azurewebsites.net/");
-            // = new ObjectMapper().readValue(defaultUrl, CentralArea.class);
+            LngLat[]  = new ObjectMapper().readValue(defaultUrl, LngLat[].class);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+}
 
-    public static CentralArea getCentralArea(){
+    public static CentralArea getInstance(){
+        if (obj == null){
+            obj = new CentralArea();
+        }
         return obj;
     }
 }
